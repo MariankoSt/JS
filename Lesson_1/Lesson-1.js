@@ -50,4 +50,4 @@ console.log(d);
 //      document.write(str / 2 + "<br/>");
 let str = "20";
 let a = 5;
-document.write(str / 2 + "<br/>");
+document.write(str * "2" + "<br/>");
