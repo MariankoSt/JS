@@ -25,13 +25,20 @@ let c = 5<6;
 console.log(typeof a);
 console.log(typeof b);
 console.log(typeof c);
-
+*/
 // - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
 // В однакових виразах не використовувати однакові оператори!!!
 //  5 ? 6 -> true
 //   5 ? 6 -> false
 //   5 ? 6 -> false
 //   5 ? 6 -> false
+//   10 ? 10 -> true
+//   10 ? 10 -> true
+//   10 ? 10 -> false
+//   10 ? 10 -> false
+//   10 ? 10 -> false
+//   123 ? '123' -> false
+//   123 ? '123' -> true
 let a = 5 < 6;
 console.log(a);
 let b = 5 > 6;
@@ -40,7 +47,22 @@ let c = 5==6;
 console.log(c);
 let d = 5>=6;
 console.log(d);
-*/
+let e = 10 == 10;
+console.log(e);
+let f = 10===10;
+console.log(f);
+let g = 10 > 10;
+console.log(g);
+let h = 10 != 10;
+console.log(h);
+let i = 10 !== 10;
+console.log(i);
+let j = 123 != '123';
+console.log(j);
+let k = 123 == '123';
+console.log(k);
+
+/*
 //- Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 //     let str = "20";
 //      let a = 5;
@@ -51,3 +73,4 @@ console.log(d);
 let str = "20";
 let a = 5;
 document.write(str * "2" + "<br/>");
+*/
