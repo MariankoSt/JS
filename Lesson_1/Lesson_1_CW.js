@@ -28,6 +28,45 @@ document.write("The hypotenuse of the right triangle is " + k );
 */
 
 //. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
+/*
+const myArray = [10, 10, 10, 10, 10, 10, 10, 10, 10, 1, 1];
+const result = (previousValue, currentValue) => previousValue + currentValue;
+console.log(myArray.reduce(result));
+*/
+//Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
+/*
+const book = {};
+book.name = 'Harry Potter';
+book.pageQuantity =  501;
+book.genre = 'fantasy';
+console.log(book);
+*/
 
-let myArray = [];
-let random = Math.floor(Math.random(10))
+// 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+/*
+const food = {
+    flavor: null,
+    weight: 100,
+    color: 'white',
+    physicalState: 'liquid'
+}
+console.log(food.flavor);
+*/
+
+// 4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
+
+const book = [
+    {
+        name: "English for 1st grade",
+        pageQuantity: 100,
+        gener: 'science',
+        author: 'Johnny Sins'
+    },
+    {
+        name: 'Inception',
+        pageQuantity: 556,
+        gener: 'fantasy, sci-fi',
+        author: 'Christopher Nolan'
+    }
+];
+
