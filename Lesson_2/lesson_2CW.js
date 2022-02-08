@@ -94,3 +94,80 @@ if (temperature >= 10 && temperature <= 22) {
     console.log('Be careful! No racing today=(');
 }
 */
+/*
+let raceNumber = Math.floor(Math.random() * 1000);
+let earlyRegistered = false;
+let runnerAge = 19
+if (runnerAge > 18 && earlyRegistered) {
+    raceNumber += 1000
+}
+// determining the race time
+if (runnerAge > 18 && earlyRegistered) {
+    console.log(`The runner with race number ${raceNumber} please, notice that the race starts at 9:30 am`);
+} else if (runnerAge > 18 && !earlyRegistered) {
+    console.log(`Late adults run at 11:00 am. The runner with race number ${raceNumber} please, notice that the race starts at 11:00 am`);
+} else if (runnerAge < 18) {
+    console.log(`The runner with race number ${raceNumber} please, notice that the race starts at 12:30 pm`);
+} else
+    console.log('Go to the registration desk!')
+*/
+// камінь, ножниці, папір
+
+const getUserChoice = userInput => {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'|| userInput === 'bomb') {
+        return userInput;
+    } else {
+        return console.log('Please, select a valid value!');
+    }
+    userInput = userInput.toLowerCase();
+};
+const getComputerChoise = () => {
+    computerInput = Math.floor(Math.random() * 3);
+    switch (computerInput) {
+        case 0 :
+            return 'rock';
+            break;
+        case 1 :
+            return 'scissors'
+            break;
+        case 2 :
+            return 'paper';
+            break;
+    }
+}
+const determineWinner = (userChoise, computerChoise) => {
+    if (userChoise === computerChoise) {
+        return 'The game was a tie';
+    } else if (userChoise === 'rock') {
+        if (computerChoise === 'scissors') {
+            return 'Human has just won!';
+        } else {
+            return 'The machine era has just begun!';
+        }
+    } else if (userChoise === 'scissors') {
+        if (computerChoise === 'rock') {
+            return 'The machine era has just begun!';
+        } else {
+            return 'Human has just won!';
+        }
+    } else if (userChoise === 'paper') {
+        if (computerChoise === 'rock') {
+            return 'Human has just won!';
+        } else {
+            return'The machine era has just begun!';
+        }
+    } else if (userChoise === 'bomb') {
+        return 'Ha Ha, Humans always wins!';
+    } else {
+        return console.log('An error has just occured!');
+    }
+
+}
+const playGame = () => {
+    let userChoise = getUserChoice('bomb');
+    let computerChoise = getComputerChoise()
+    console.log('You threw: ' + userChoise);
+    console.log('The computer threw: ' + computerChoise);
+    console.log(determineWinner(userChoise,computerChoise))
+}
+playGame();
